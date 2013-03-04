@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+<style>
+@font-face { font-family: "Nexus Serif"; src: url("fonts/NexusSerifWebIE10-Italic.woff"); }
+@font-face { font-family: "Unit"; src: url("fonts/UnitWebIE10-Ultra.woff"); }
+@font-face { font-family: "Mister K"; src: url("fonts/MisterKWebIE10.woff"); }
+@font-face { font-family: "Milo Serif"; src: url("fonts/MiloSerifWebIE10.woff"); }
+@font-face { font-family: "Tartine Script"; src: url("fonts/TartineScriptWebIE10.woff"); }
+@font-face { font-family: "PalaLTStd-Roman"; src: url("fonts/PalaLTStd-Roman.otf"); }
+</style>
+<style>
+/* http://ie.microsoft.com/testdrive/Graphics/opentype/opentype-fontfont/index.html */
+body {
+  font-family: 'PalaLTStd-Roman';
+}
+em { font-style: normal; }
+.oldstyle-nums { -webkit-font-feature-settings: 'onum';  font-size: 5em;}
+.lining-nums { -webkit-font-feature-settings: 'lnum'; }
+.tabular-nums { -webkit-font-feature-settings: 'tnum'; }
+.proportional-nums { -webkit-font-feature-settings: 'pnum'; }
+.slashed-zero { -webkit-font-feature-settings: 'zero'; }
+.diagonal-fractions { -webkit-font-feature-settings: 'frac'; font-size: 5em; }
+.stacked-fractions { -webkit-font-feature-settings: 'afrc'; }
+.sup { -webkit-font-feature-settings: 'sups'; }
+.sub { -webkit-font-feature-settings: 'subs'; }
+.ordinal { -webkit-font-feature-settings: 'ordn'; }
+.small-caps { -webkit-font-feature-settings: 'smcp';}
+.all-small-caps { -webkit-font-feature-settings: 'c2sc';}
+.common-ligatures { -webkit-font-feature-settings: "clig"; font-family: "Tartine Script"; font-size: 6em; }
+.discretionary-ligatures { -webkit-font-feature-settings: "dlig"; font-family: "Milo Serif"; font-size: 7em; }
+.historical-ligatures { -webkit-font-feature-settings: "hlig"; }
+.contextual-alternates { -webkit-font-feature-settings: "calt"; font-family: "Mister K"; font-size: 6em; }
+.swash { -webkit-font-feature-settings: "cswh" 1; font-family: "Nexus Serif"; font-size: 5em; }
+.ss01 { -webkit-font-feature-settings: "ss01" 1; font-family: "Unit"; font-size: 5em; }
+.ss02 { -webkit-font-feature-settings: "ss02" 1; }
+.ss03 { -webkit-font-feature-settings: "ss03" 1; }
+.ss04 { -webkit-font-feature-settings: "ss04" 1; }
+
+.optimize-speed { text-rendering: optimizeSpeed; }
+.optimize-legibility { text-rendering: optimizeLegibility; }
+
+</style>
+</head>
+<body>
+
+<h1>CSS3 Font Features</h1>
+
+<h2>Ligatures</h2>
+
+<h3>Common Ligatures</h3>
+<p>Enables display of common ligatures (OpenType features: liga, clig). For OpenType fonts, common ligatures are enabled by default.</p>
+<div class="common-ligatures"> <em>fl</em>u<em>ffi</em></span>ly come to an end now.</div>
+
+<h3>Discretionary Ligatures</h3>
+<p>Enables display of discretionary ligatures (OpenType feature: dlig). Which ligatures are discretionary, or optional, is decided by the type designer so authors will need to refer to the documentation of a given font to understand which ligatures are considered discretionary.</p>
+<div class="discretionary-ligatures"><em>st</em>op that <em>gi</em>rli<em>sh</em> talk!</div>
+
+<h3>Contextual Alternates</h3>
+<p>Enables display of contextual alternates (OpenType feature: calt). Although not strictly a ligature feature, like ligatures this feature is commonly used to harmonize the shapes of glyphs with the surrounding context. For OpenType fonts, this feature is on by default.</p>
+<div class="contextual-alternates"> <em>Like in those glamour magazines</em>!  </div>
+
+<!--<h3>Historical Ligatures</h3>
+<p>Enables display of historical ligatures (OpenType feature: hlig).</p>
+<div class="historical-ligatures">?</div>
+<h2>Superscript and Subscript</h2>
+<h3>Superscript</h3>
+<div class="sup">H 0123456789</div>
+<h3>Subscript</h3>
+<div class="sub">H 0123456789</div>-->
+
+<h2>Capitalization</h2>
+<h3>Small Caps</h3>
+<div style="font-size: 5em;">Regular <span style="font-variant: small-caps;">synthetic small caps</span></div>
+<div style="font-size: 5em;">Regular <span class="small-caps">real small caps</span></div>
+<h3>Capitals to Small Caps</h3>
+<div style="font-size: 5em;">Regular <span class="all-small-caps">REAL ALL SMALL CAPS</span></div>
+
+<h2>Numerical formatting</h2>
+
+<!--<h3>Lining Figures</h3>
+<div class="lining-nums">0123456789</div>
+<h3>Proportional Figures</h3>
+<div class="proportional-nums">0123456789</div>
+<h3>Tabular Figures</h3>
+<div class="tabular-nums">0123456789</div>-->
+<h3>Oldstyle Figures</h3>
+<div class="oldstyle-nums">0123456789</div>
+<h3>Diagonal Fractions</h3>
+<div class="diagonal-fractions">1/2 1/4 3/4 0/00</div>
+<!--
+<h3>Stacked Fractions</h3>
+<div>2 1/3</div>
+<div class="stacked-fractions">2 1/3</div>
+<h3>Ordinal</h3>
+<div>2<span class="ordinal">a</span> + 2<span class="ordinal">b</span></div>
+<h3>Slashed Zero</h3>
+<div class="slashed-zero">0123456789</div>
+-->
+
+<h2>Alternates and swashes</h2>
+
+<h3>Swash</h3>
+<div class="swash"><em>B</em>es<em>t</em> <em>D</em>resse<em>s</em>!</div>
+
+<h3>Stylistic Sets</h3>
+<div class="ss01"><em>U</em>ltr<em class="ss02">a</em> h<em class="ss03">i</em><em class="ss04">g</em>h heels?</div>
+
+<h2 class="optimize-speed">Optimized for Speed</h2>
+<h2 class="optimize-legibility">Optimized for Legibility</h2>
+
+
+</body>
+
+
+</html>
